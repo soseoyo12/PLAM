@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct PLAMApp: App {
+    private let container = DIContainer()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            container.makeAppCoordinator().build()
         }
     }
 }
